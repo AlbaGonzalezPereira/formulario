@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            border: 1px solid black;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <p>Flexbox é un módulo de CSS3 que permite crear layouts flexibles e adaptables a diferentes tamaños de pantalla.</p>
+    <p>Para crear un contedor flex, establece o valor da propiedad CSS display en flex ou inline-flex. Unha vez que fagas isto, os fillos directos 
+        do contedor convírtense en elementos flex, o que significa que se poden usar as propiedades de CSS como justify-content ou align-items 
+        para aliñarlos como se desexe.</p>
+    <p>Os elementos nun contenedor flex deben ser elementos en bloque por defecto. Sen embargo, tamén se pode cambiar o comportamento 
+        predeterminado utilizando propiedades de CSS como display: inline-flex para facer que os elementos sexan en liña en lugar de en 
+        bloque.</p>
+
+    <h2>Exemplo 1: Flexbox Container con 3 Elementos</h2>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>Exemplo 2: Flexbox Container con Alineación Vertical</h2>
+    <p>Por defecto é en horizaontal</p>
+    <div class="container" style="flex-direction: column;"><!--podemos poñelo en .container-->
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>Exemplo 3: Flexbox Container con Alineación á Dereita</h2>
+    <div class="container" style="justify-content: flex-end;"> <!--podemos poñelo en .container-->
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>Exemplo 4: Flexbox Container con Espacio Entre Elementos</h2>
+    <div class="container" style="justify-content: space-between;"> <!--podemos poñelo en .container-->
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>Exemplo 5: GAP</h2>
+    <div class="container" style="gap: 20px;"> <!--podemos poñelo en .container-->
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>Exemplo 6: wrap</h2>
+    <p>Por defecto é flex-wrap: nowrap</p>
+    <div class="container" style="flex-wrap: wrap;"> <!--podemos poñelo en .container-->
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+
+    <h2>Exemplo 7: align-items</h2>
+    <p>Por defecto é stretch</p>
+    <div class="container" style="align-items: flex-start;"> <!--podemos poñelo en .container-->
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    
+</body>
+</html>

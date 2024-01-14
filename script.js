@@ -51,12 +51,49 @@ function validarNome(){
     
     if (!expresionReg.test(nome.value.toUpperCase())) {
         nome.classList.add("is-invalid");
-        
+        nome.style.border = "2px solid red";
+        let validNome = nome.parentNode.querySelector("p");
+        if (!validNome) {
+            validNome = document.createElement("p");
+            validNome.setAttribute("class", "red");
+            nome.parentNode.append(validNome);
+        }
         validNome.innerHTML = "O nome é incorrecto";
-        nome.parentNode.append(validNome);
-
+        return false;
     } else {
         nome.classList.remove("is-invalid");
-        validNome.innerHTML = "";
+        let validNome = nome.parentNode.querySelector("p");
+        if (validNome) {
+            validNome.remove();
+        }
+        return true;
     }
+}
+
+function validarApelidos(){
+    return true;
+}
+
+function validarIdade(){
+    return true;
+}
+
+function validarCurso(){
+    return true;
+}
+
+function validarCentro(){
+    return true;
+}
+
+function validarObservacions(){
+    return true;
+}
+
+function validarActividades(){
+    return true;
+}
+
+function validarConsentimento(){
+   return true;
 }
